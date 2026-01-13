@@ -1,0 +1,27 @@
+{
+  "model_name": "probl1_neural_network",
+  "model_path": "models/probl1_neural_network_20260103_205256.joblib",
+  "timestamp": "20260103_205256",
+  "training_date": "2026-01-03T20:52:56.801004",
+  "hyperparameters": {
+    "sampling": "smote",
+    "n_layers": 2,
+    "neurons_layer_0": 32,
+    "neurons_layer_1": 64,
+    "activation": "relu",
+    "solver": "adam",
+    "alpha": 5.990407068922373e-05,
+    "learning_rate_init": 0.001723220766013893,
+    "max_iter": 180
+  },
+  "model_type": "MLPClassifier",
+  "architecture": "No especificado",
+  "activation": "relu",
+  "solver": "adam",
+  "augmented": true,
+  "undersampled": false,
+  "scaler_applied": true,
+  "augmentation_method": "smote",
+  "training_iterations": 96,
+  "final_loss": 0.22279864908479352
+}

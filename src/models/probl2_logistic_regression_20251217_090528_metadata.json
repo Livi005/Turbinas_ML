@@ -1,0 +1,50 @@
+{
+  "model_name": "probl2_logistic_regression",
+  "model_path": "models/probl2_logistic_regression_20251217_090528.joblib",
+  "timestamp": "20251217_090528",
+  "training_date": "2025-12-17T09:05:28.575965",
+  "hyperparameters": {
+    "memory": null,
+    "steps": [
+      [
+        "scaler",
+        "StandardScaler()"
+      ],
+      [
+        "clf",
+        "LogisticRegression(C=5, max_iter=5000)"
+      ]
+    ],
+    "transform_input": null,
+    "verbose": false,
+    "scaler": "StandardScaler()",
+    "clf": "LogisticRegression(C=5, max_iter=5000)",
+    "scaler__copy": true,
+    "scaler__with_mean": true,
+    "scaler__with_std": true,
+    "clf__C": 5,
+    "clf__class_weight": null,
+    "clf__dual": false,
+    "clf__fit_intercept": true,
+    "clf__intercept_scaling": 1,
+    "clf__l1_ratio": null,
+    "clf__max_iter": 5000,
+    "clf__multi_class": "deprecated",
+    "clf__n_jobs": null,
+    "clf__penalty": "l2",
+    "clf__random_state": null,
+    "clf__solver": "lbfgs",
+    "clf__tol": 0.0001,
+    "clf__verbose": 0,
+    "clf__warm_start": false
+  },
+  "best_score": 0.9477740852968818,
+  "best_params": {
+    "clf": "LogisticRegression(max_iter=5000)",
+    "clf__C": 5,
+    "clf__class_weight": null,
+    "clf__penalty": "l2",
+    "clf__solver": "lbfgs"
+  },
+  "scorer": "f1_macro"
+}

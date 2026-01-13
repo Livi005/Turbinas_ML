@@ -1,0 +1,22 @@
+Característica (Fila),Investigación de modelos.pdf,Turbo-Generator Vibration Fault Diagnosis Based on PSO-BP Neural,Bearing Faults Diagnosis of a Turbogenerator System Using Machine Learning Training Functions,"Fault Detection and Diagnosis in Industry 4.0: A Review on
+Challenges and Opportunities","Time–Frequency-Domain Fusion Cross-Attention Fault Diagnosis Method Based on Dynamic Modeling of Bearing
+Rotor System",Explainable Artificial Intelligence Techniques for Accurate Fault Detection and Diagnosis – A Review,"The Use of eXplainable Artificial Intelligence and Machine
+Learning Operation Principles to Support the Continuous
+Development of Machine Learning-Based Solutions in Fault
+Detection and Identification","Review of Artificial Intelligence Methods for
+Faults Monitoring, Diagnosis, and Prognosis in
+Hydroelectric Synchronous Generators"
+Autor,,zhang,Sabani,Leite,Xing,Maged,Tran,Bechara
+Año,,2010,2024,2024,2025,2024,2024,2024
+,,,,,,,,
+,,,,,,,,
+Algoritmo de ML/IA: Redes Neuronales (ANN/DL),X (PSO-BP),Networks,"X (ANN, Bayesian Reg.)","X (DNN, VAE, GNN)","X (DL, Cross-Attention)",X (Deep Learning),X (DNN),"X (ANN, CNN, RNN)"
+Algoritmo de ML/IA: Modelos de Ensamble/Árboles,"X (XGBoost, RF)",,,"X (XGBoost, RF)",,"X (Decision Trees, Ensemble)",,"X (Random Forest, DT)"
+Algoritmo de ML/IA: Máquinas de Soporte Vectorial (SVM),X (RBF kernel),,,X,,,,X
+Objeto de Diagnóstico: Turbo-Grupo/Generador,X,X,X,X (Máquinas Rotatorias),,,,X (Generadores Hidroeléctricos)
+Objeto de Diagnóstico: Rodamientos/Rotor,,,X,X,X,X (Máquinas Rotatorias),,X (Sistemas Rotatorios)
+Análisis de Señal: Vibración,X,X,X,,X (T/F-Domain Fusion),,,X
+Técnica de Optimización: PSO,X,X,,,,,,
+Técnica de Mejora: Reducción de Atributos,,X (RST),,,,,,
+Técnica de Mejora: Fusión de Dominios,,,,,X (Tiempo-Frecuencia),,,
+Enfoque: Interpretabilidad/Revisión General (XAI/Review),X (Interpretabilidad),,,"X (Review, XAI)",,X (Review XAI),"X (XAI, MLOps)",X (Topical Review)

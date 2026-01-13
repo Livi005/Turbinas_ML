@@ -1,0 +1,28 @@
+{
+  "model_name": "logistic_regression_scaled",
+  "model_path": "models/logistic_regression_scaled_20251119_010822.joblib",
+  "timestamp": "20251119_010822",
+  "training_date": "2025-11-19T01:08:22.481707",
+  "hyperparameters": {
+    "C": 1.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": null,
+    "max_iter": 1000,
+    "multi_class": "deprecated",
+    "n_jobs": null,
+    "penalty": "l2",
+    "random_state": 42,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "training_samples": 1304,
+  "augmented": false,
+  "scaler_applied": true,
+  "original_training_samples": 941,
+  "augmentation_method": null
+}

@@ -1,0 +1,21 @@
+This dataset is designed for fault detection in gas turbine engines using 
+machine learning techniques. It contains 1,386 samples with sensor readings 
+and operational parameters collected from a simulated gas turbine system. 
+The dataset can be used to develop and optimize classification models for 
+predictive maintenance and fault diagnosis.
+
+Key Features
+Temperature (°C) – Turbine inlet temperature.
+RPM – Rotational speed of the turbine.
+Torque (Nm) – Force applied to the turbine shaft.
+Vibrations (mm/s) – Mechanical vibration intensity.
+Power Output (MW) – Generated power output.
+Fuel Flow Rate (kg/s) – Rate of fuel consumption.
+Air Pressure (kPa) – Air intake and exhaust pressure.
+Exhaust Gas Temperature (°C) – Heat measurement at the exhaust.
+Oil Temperature (°C) – Temperature of lubricating oil.
+Fault – Binary classification (0 = No Fault, 1 = Fault).
+Use Cases
+Predictive maintenance in gas turbines.
+Machine learning model optimization for fault classification.
+Performance analysis and anomaly detection in industrial machinery.

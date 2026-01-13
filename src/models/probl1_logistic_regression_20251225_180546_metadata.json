@@ -1,0 +1,53 @@
+{
+  "model_name": "probl1_logistic_regression",
+  "model_path": "models/probl1_logistic_regression_20251225_180546.joblib",
+  "timestamp": "20251225_180546",
+  "training_date": "2025-12-25T18:05:46.215511",
+  "hyperparameters": {
+    "memory": null,
+    "steps": [
+      [
+        "sampler",
+        "RandomUnderSampler(random_state=42)"
+      ],
+      [
+        "scaler",
+        "StandardScaler()"
+      ],
+      [
+        "clf",
+        "LogisticRegression(C=10, class_weight='balanced', l1_ratio=1, max_iter=5000,\n                   penalty='elasticnet', random_state=42, solver='saga')"
+      ]
+    ],
+    "transform_input": null,
+    "verbose": false,
+    "sampler": "RandomUnderSampler(random_state=42)",
+    "scaler": "StandardScaler()",
+    "clf": "LogisticRegression(C=10, class_weight='balanced', l1_ratio=1, max_iter=5000,\n                   penalty='elasticnet', random_state=42, solver='saga')",
+    "sampler__random_state": 42,
+    "sampler__replacement": false,
+    "sampler__sampling_strategy": "auto",
+    "scaler__copy": true,
+    "scaler__with_mean": true,
+    "scaler__with_std": true,
+    "clf__C": 10,
+    "clf__class_weight": "balanced",
+    "clf__dual": false,
+    "clf__fit_intercept": true,
+    "clf__intercept_scaling": 1,
+    "clf__l1_ratio": 1,
+    "clf__max_iter": 5000,
+    "clf__multi_class": "deprecated",
+    "clf__n_jobs": null,
+    "clf__penalty": "elasticnet",
+    "clf__random_state": 42,
+    "clf__solver": "saga",
+    "clf__tol": 0.0001,
+    "clf__verbose": 0,
+    "clf__warm_start": false
+  },
+  "augmented": false,
+  "undersampled": true,
+  "scaler_applied": true,
+  "augmentation_method": "RandomUnderSampler"
+}

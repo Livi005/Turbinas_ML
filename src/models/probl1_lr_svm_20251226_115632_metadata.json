@@ -1,0 +1,102 @@
+{
+  "model_name": "probl1_lr_svm",
+  "model_path": "models/probl1_lr_svm_20251226_115632.joblib",
+  "timestamp": "20251226_115632",
+  "training_date": "2025-12-26T11:56:32.096409",
+  "hyperparameters": {
+    "estimators": [
+      [
+        "lr",
+        "Pipeline(steps=[('sampler', RandomUnderSampler(random_state=42)),\n                ('scaler', StandardScaler()),\n                ('clf',\n                 LogisticRegression(C=10, class_weight='balanced', l1_ratio=1,\n                                    max_iter=5000, penalty='elasticnet',\n                                    random_state=42, solver='saga'))])"
+      ],
+      [
+        "svm",
+        "Pipeline(steps=[('scaler', StandardScaler()),\n                ('model',\n                 SVC(C=69.84841896499474, cache_size=2000,\n                     class_weight='balanced', gamma='auto', probability=True,\n                     random_state=42))])"
+      ]
+    ],
+    "flatten_transform": true,
+    "n_jobs": null,
+    "verbose": false,
+    "voting": "soft",
+    "weights": [
+      1,
+      2
+    ],
+    "lr": "Pipeline(steps=[('sampler', RandomUnderSampler(random_state=42)),\n                ('scaler', StandardScaler()),\n                ('clf',\n                 LogisticRegression(C=10, class_weight='balanced', l1_ratio=1,\n                                    max_iter=5000, penalty='elasticnet',\n                                    random_state=42, solver='saga'))])",
+    "svm": "Pipeline(steps=[('scaler', StandardScaler()),\n                ('model',\n                 SVC(C=69.84841896499474, cache_size=2000,\n                     class_weight='balanced', gamma='auto', probability=True,\n                     random_state=42))])",
+    "lr__memory": null,
+    "lr__steps": [
+      [
+        "sampler",
+        "RandomUnderSampler(random_state=42)"
+      ],
+      [
+        "scaler",
+        "StandardScaler()"
+      ],
+      [
+        "clf",
+        "LogisticRegression(C=10, class_weight='balanced', l1_ratio=1, max_iter=5000,\n                   penalty='elasticnet', random_state=42, solver='saga')"
+      ]
+    ],
+    "lr__transform_input": null,
+    "lr__verbose": false,
+    "lr__sampler": "RandomUnderSampler(random_state=42)",
+    "lr__scaler": "StandardScaler()",
+    "lr__clf": "LogisticRegression(C=10, class_weight='balanced', l1_ratio=1, max_iter=5000,\n                   penalty='elasticnet', random_state=42, solver='saga')",
+    "lr__sampler__random_state": 42,
+    "lr__sampler__replacement": false,
+    "lr__sampler__sampling_strategy": "auto",
+    "lr__scaler__copy": true,
+    "lr__scaler__with_mean": true,
+    "lr__scaler__with_std": true,
+    "lr__clf__C": 10,
+    "lr__clf__class_weight": "balanced",
+    "lr__clf__dual": false,
+    "lr__clf__fit_intercept": true,
+    "lr__clf__intercept_scaling": 1,
+    "lr__clf__l1_ratio": 1,
+    "lr__clf__max_iter": 5000,
+    "lr__clf__multi_class": "deprecated",
+    "lr__clf__n_jobs": null,
+    "lr__clf__penalty": "elasticnet",
+    "lr__clf__random_state": 42,
+    "lr__clf__solver": "saga",
+    "lr__clf__tol": 0.0001,
+    "lr__clf__verbose": 0,
+    "lr__clf__warm_start": false,
+    "svm__memory": null,
+    "svm__steps": [
+      [
+        "scaler",
+        "StandardScaler()"
+      ],
+      [
+        "model",
+        "SVC(C=69.84841896499474, cache_size=2000, class_weight='balanced', gamma='auto',\n    probability=True, random_state=42)"
+      ]
+    ],
+    "svm__transform_input": null,
+    "svm__verbose": false,
+    "svm__scaler": "StandardScaler()",
+    "svm__model": "SVC(C=69.84841896499474, cache_size=2000, class_weight='balanced', gamma='auto',\n    probability=True, random_state=42)",
+    "svm__scaler__copy": true,
+    "svm__scaler__with_mean": true,
+    "svm__scaler__with_std": true,
+    "svm__model__C": 69.84841896499474,
+    "svm__model__break_ties": false,
+    "svm__model__cache_size": 2000,
+    "svm__model__class_weight": "balanced",
+    "svm__model__coef0": 0.0,
+    "svm__model__decision_function_shape": "ovr",
+    "svm__model__degree": 3,
+    "svm__model__gamma": "auto",
+    "svm__model__kernel": "rbf",
+    "svm__model__max_iter": -1,
+    "svm__model__probability": true,
+    "svm__model__random_state": 42,
+    "svm__model__shrinking": true,
+    "svm__model__tol": 0.001,
+    "svm__model__verbose": false
+  }
+}

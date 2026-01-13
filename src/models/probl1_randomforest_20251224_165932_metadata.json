@@ -1,0 +1,48 @@
+{
+  "model_name": "probl1_randomforest",
+  "model_path": "models/probl1_randomforest_20251224_165932.joblib",
+  "timestamp": "20251224_165932",
+  "training_date": "2025-12-24T16:59:33.071525",
+  "hyperparameters": {
+    "memory": null,
+    "steps": [
+      [
+        "sampler",
+        "RandomUnderSampler(random_state=42)"
+      ],
+      [
+        "model",
+        "RandomForestClassifier(max_depth=19, min_samples_leaf=3, n_estimators=179)"
+      ]
+    ],
+    "transform_input": null,
+    "verbose": false,
+    "sampler": "RandomUnderSampler(random_state=42)",
+    "model": "RandomForestClassifier(max_depth=19, min_samples_leaf=3, n_estimators=179)",
+    "sampler__random_state": 42,
+    "sampler__replacement": false,
+    "sampler__sampling_strategy": "auto",
+    "model__bootstrap": true,
+    "model__ccp_alpha": 0.0,
+    "model__class_weight": null,
+    "model__criterion": "gini",
+    "model__max_depth": 19,
+    "model__max_features": "sqrt",
+    "model__max_leaf_nodes": null,
+    "model__max_samples": null,
+    "model__min_impurity_decrease": 0.0,
+    "model__min_samples_leaf": 3,
+    "model__min_samples_split": 2,
+    "model__min_weight_fraction_leaf": 0.0,
+    "model__monotonic_cst": null,
+    "model__n_estimators": 179,
+    "model__n_jobs": null,
+    "model__oob_score": false,
+    "model__random_state": null,
+    "model__verbose": 0,
+    "model__warm_start": false
+  },
+  "augmented": false,
+  "undersampled": true,
+  "scaler_applied": false
+}

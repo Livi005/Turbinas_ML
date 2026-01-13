@@ -1,0 +1,44 @@
+{
+  "model_name": "probl2_svm",
+  "model_path": "models/probl2_svm_20251227_084344.joblib",
+  "timestamp": "20251227_084344",
+  "training_date": "2025-12-27T08:43:44.551288",
+  "hyperparameters": {
+    "memory": null,
+    "steps": [
+      [
+        "scaler",
+        "StandardScaler()"
+      ],
+      [
+        "model",
+        "SVC(C=195.60600539623996, cache_size=2000, class_weight='balanced',\n    gamma=0.04220067203463431, random_state=42)"
+      ]
+    ],
+    "transform_input": null,
+    "verbose": false,
+    "scaler": "StandardScaler()",
+    "model": "SVC(C=195.60600539623996, cache_size=2000, class_weight='balanced',\n    gamma=0.04220067203463431, random_state=42)",
+    "scaler__copy": true,
+    "scaler__with_mean": true,
+    "scaler__with_std": true,
+    "model__C": 195.60600539623996,
+    "model__break_ties": false,
+    "model__cache_size": 2000,
+    "model__class_weight": "balanced",
+    "model__coef0": 0.0,
+    "model__decision_function_shape": "ovr",
+    "model__degree": 3,
+    "model__gamma": 0.04220067203463431,
+    "model__kernel": "rbf",
+    "model__max_iter": -1,
+    "model__probability": false,
+    "model__random_state": 42,
+    "model__shrinking": true,
+    "model__tol": 0.001,
+    "model__verbose": false
+  },
+  "augmented": false,
+  "undersampled": false,
+  "scaler_applied": true
+}

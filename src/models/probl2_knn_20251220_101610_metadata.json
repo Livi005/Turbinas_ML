@@ -1,0 +1,45 @@
+{
+  "model_name": "probl2_knn",
+  "model_path": "models/probl2_knn_20251220_101610.joblib",
+  "timestamp": "20251220_101610",
+  "training_date": "2025-12-20T10:16:10.717594",
+  "hyperparameters": {
+    "memory": null,
+    "steps": [
+      [
+        "scaler",
+        "StandardScaler()"
+      ],
+      [
+        "clf",
+        "KNeighborsClassifier(leaf_size=20, n_neighbors=11, p=1, weights='distance')"
+      ]
+    ],
+    "transform_input": null,
+    "verbose": false,
+    "scaler": "StandardScaler()",
+    "clf": "KNeighborsClassifier(leaf_size=20, n_neighbors=11, p=1, weights='distance')",
+    "scaler__copy": true,
+    "scaler__with_mean": true,
+    "scaler__with_std": true,
+    "clf__algorithm": "auto",
+    "clf__leaf_size": 20,
+    "clf__metric": "minkowski",
+    "clf__metric_params": null,
+    "clf__n_jobs": null,
+    "clf__n_neighbors": 11,
+    "clf__p": 1,
+    "clf__weights": "distance"
+  },
+  "best_score": 0.9468623598298421,
+  "best_params": {
+    "clf": "KNeighborsClassifier()",
+    "clf__algorithm": "auto",
+    "clf__leaf_size": 20,
+    "clf__metric": "minkowski",
+    "clf__n_neighbors": 11,
+    "clf__p": 1,
+    "clf__weights": "distance"
+  },
+  "scorer": "f1_macro"
+}
