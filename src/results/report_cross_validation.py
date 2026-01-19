@@ -26,16 +26,6 @@ def _metric_order(cv_results: Dict[str, Any]) -> List[str]:
 def summarize_cv_results(cv_results: Dict[str, Any]) -> Dict[str, Any]:
     """
     Build helpful aggregates from cross-validation results.
-
-    Parameters
-    ----------
-    cv_results : dict
-        Output dictionary returned by cross_validate_model.
-
-    Returns
-    -------
-    dict
-        Dictionary containing per-metric summaries and per-fold stats.
     """
     if not cv_results:
         raise ValueError("cv_results cannot be empty")
@@ -74,6 +64,8 @@ def summarize_cv_results(cv_results: Dict[str, Any]) -> Dict[str, Any]:
         'metric_names': metric_names,
         'fold_results': fold_results,
         'cv_folds': cv_results.get('cv_folds'),
+        'cv_repeats': cv_results.get('cv_repeats'),
+        'n_total_folds': cv_results.get('n_total_folds'),
     }
 
 
@@ -96,15 +88,24 @@ def _build_summary_table(summary: Dict[str, Dict[str, float]]) -> str:
 
 def _build_fold_table(metric_names: List[str], fold_results: List[Dict[str, Any]]) -> str:
     lines = []
-    header = "| Fold | " + " | ".join(m.capitalize() for m in metric_names) + " |\n"
-    divider = "|" + "|".join(["------"] * (len(metric_names) + 1)) + "|\n"
+    extra_cols = []
+    # If repeats exist, add column
+    if fold_results and 'repeat' in fold_results[0]:
+        extra_cols.append("Repeat")
+
+    header_cols = ["Fold"] + extra_cols + [m.capitalize() for m in metric_names]
+    header = "| " + " | ".join(header_cols) + " |\n"
+    divider = "|" + "|".join(["------"] * len(header_cols)) + "|\n"
     lines.append(header)
     lines.append(divider)
+
     for fold in fold_results:
-        row = f"| {fold.get('fold', '?')} | "
-        row += " | ".join(f"{fold.get(metric, 0.0):.4f}" for metric in metric_names)
-        row += " |\n"
-        lines.append(row)
+        row_parts = [str(fold.get('fold', '?'))]
+        if extra_cols:
+            row_parts.append(str(fold.get('repeat', '?')))
+        row_parts.extend([f"{fold.get(metric, 0.0):.4f}" for metric in metric_names])
+        lines.append("| " + " | ".join(row_parts) + " |\n")
+
     return "".join(lines)
 
 
@@ -116,23 +117,6 @@ def generate_cv_markdown_report(
 ) -> str:
     """
     Generate a markdown report for cross-validation results.
-
-    Parameters
-    ----------
-    cv_results : dict
-        Output dictionary from cross_validate_model.
-    model_name : str, default="logistic_regression"
-        Name of the model evaluated.
-    output_path : str, optional
-        Desired output filename (inside results/ if relative). If None, a timestamped
-        filename is generated.
-    title : str, optional
-        Custom report title. Defaults to "Cross-Validation Report - {model_name}".
-
-    Returns
-    -------
-    str
-        Path to the saved markdown report.
     """
     summary_data = summarize_cv_results(cv_results)
 
@@ -150,8 +134,15 @@ def generate_cv_markdown_report(
     md.append(f"# {title}\n")
     md.append(f"\n**Generated on:** {datetime.now():%Y-%m-%d %H:%M:%S}\n")
     md.append(f"\n**Model:** `{model_name}`\n")
-    if summary_data['cv_folds']:
+
+    if summary_data.get('cv_folds'):
         md.append(f"\n**Number of folds:** {summary_data['cv_folds']}\n")
+
+    if summary_data.get('cv_repeats'):
+        md.append(f"\n**Repeats:** {summary_data['cv_repeats']}\n")
+
+    if summary_data.get('n_total_folds'):
+        md.append(f"\n**Total fold evaluations:** {summary_data['n_total_folds']}\n")
 
     md.append("\n## Overall Metrics Summary\n\n")
     md.append(_build_summary_table(summary_data['summaries']))
@@ -181,11 +172,6 @@ def report_cross_validation(
 ) -> Tuple[Dict[str, Any], str]:
     """
     Convenience function to summarize CV results and generate a report.
-
-    Returns
-    -------
-    tuple(dict, str)
-        Summary dictionary and path to the markdown report.
     """
     summary = summarize_cv_results(cv_results)
     report_path = generate_cv_markdown_report(
